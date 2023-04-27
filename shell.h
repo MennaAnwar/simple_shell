@@ -122,6 +122,9 @@ char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
 
 char *_strcpy(char *, char *);
+char *_strncpy(char *, char *, int);
+char *_strncat(char *, char *, int);
+char *_strchr(char *, char);
 char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
@@ -174,5 +177,9 @@ void check_next(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 void comment_handling(char *);
+
+void *_realloc(void *, unsigned int, unsigned int);
+int _getline(info_t *, char **, size_t *);
+ssize_t read_buf(info_t *info, char *buf, size_t *i);
 
 #endif
