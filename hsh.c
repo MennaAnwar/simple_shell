@@ -22,7 +22,8 @@ int hsh(info_t *info, char **av)
 		if (r != -1)
 		{
 			set_info(info, av);
-			/* TODO find builtin*/
+			builtin_ret = check_builtin(info);
+			if (builtin_ret == -1)
 				find_cmd(info);
 		}
 		else if (interactive(info))
