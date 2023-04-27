@@ -27,7 +27,7 @@ void set_info(info_t *info, char **av)
 			;
 		info->argc = i;
 
-		/* TODO replace alias */
+		replace_alias(info);
 		/* TODO replace vars */
 	}
 }
