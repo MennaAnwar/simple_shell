@@ -157,7 +157,7 @@ void free_info(info_t *, int);
 char *_getenv(info_t *, const char *);
 int _env(info_t *);
 int _setenv(info_t *);
-int _myunsetenv(info_t *);
+int _unsetenv(info_t *);
 int populate_env_list(info_t *);
 
 char **get_environ(info_t *);
