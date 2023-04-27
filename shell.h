@@ -18,14 +18,14 @@
 #define BUF_FLUSH -1
 
 /* for command chaining */
-#define NORM	0
-#define OR		1
-#define AND		2
-#define CHAIN	3
+#define NORM 0
+#define OR 1
+#define AND 2
+#define CHAIN 3
 
 /* for convert_number() */
-#define CONVERT_LOWERCASE	1
-#define CONVERT_UNSIGNED	2
+#define CONVERT_LOWERCASE 1
+#define CONVERT_UNSIGNED 2
 
 extern char **environ;
 
@@ -78,14 +78,16 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 
-	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
+	char **cmd_buf;	  /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 } info_t;
 
-#define INFO_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-	0, 0}
+#define INFO_INIT                                                         \
+	{                                                                     \
+		NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+			0, 0                                                          \
+	}
 
 /**
  *struct builtin - contains a builtin string and related function
@@ -97,7 +99,6 @@ typedef struct builtin
 	char *type;
 	int (*func)(info_t *);
 } builtin_table;
-
 
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
@@ -138,7 +139,6 @@ int _error_atoi(char *);
 void print_error(info_t *, char *);
 int print_decimal(int, int);
 
-
 int _myexit(info_t *);
 int _mycd(info_t *);
 int _myhelp(info_t *);
@@ -173,5 +173,6 @@ int is_next(info_t *, char *, size_t *);
 void check_next(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
+void comment_handling(char *);
 
 #endif

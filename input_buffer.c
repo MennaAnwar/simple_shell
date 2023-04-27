@@ -29,9 +29,7 @@ ssize_t input_buffer(info_t *info, char **buf, size_t *len)
 				r--;
 			}
 			info->linecount_flag = 1;
-
-			/* TODO remove comments */
-
+			comment_handling(*buf);
 			*len = r;
 			info->cmd_buf = buf;
 		}
