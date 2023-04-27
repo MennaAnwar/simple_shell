@@ -175,6 +175,8 @@ ssize_t get_node_index(list_t *, list_t *);
 int is_next(info_t *, char *, size_t *);
 void check_next(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
+int print_alias(list_t *);
+list_t *node_starts_with(list_t *, char *, char);
 int replace_vars(info_t *);
 void comment_handling(char *);
 
