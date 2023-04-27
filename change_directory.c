@@ -44,8 +44,8 @@ int _change_dir(info_t *info)
     }
     else
     {
-        _mysetenv(info, "OLDPWD", _getenv(info, "PWD="));
-        _mysetenv(info, "PWD", getcwd(buffer, 1024));
+        _setenv(info, "OLDPWD", _getenv(info, "PWD="));
+        _setenv(info, "PWD", getcwd(buffer, 1024));
     }
     return (0);
 }
