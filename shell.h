@@ -172,12 +172,13 @@ char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
 ssize_t get_node_index(list_t *, list_t *);
 int delete_node_at_index(list_t **, unsigned int);
+list_t *add_node_end(list_t **, const char *, int);
+list_t *node_starts_with(list_t *, char *, char);
 
 int is_next(info_t *, char *, size_t *);
 void check_next(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int print_alias(list_t *);
-list_t *node_starts_with(list_t *, char *, char);
 int replace_vars(info_t *);
 void comment_handling(char *);
 
