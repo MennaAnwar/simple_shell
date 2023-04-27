@@ -142,10 +142,8 @@ int _error_atoi(char *);
 void print_error(info_t *, char *);
 int print_decimal(int, int);
 
-int _myexit(info_t *);
-int _mycd(info_t *);
-int _myhelp(info_t *);
-
+int exit_shell(info_t *);
+int _change_dir(info_t *);
 int _myalias(info_t *);
 
 ssize_t input_buffer(info_t *info, char **buf, size_t *len);
