@@ -34,6 +34,7 @@ int main(int argc, char **argv)
 		}
 		info->readfd = fp;
 	}
+	populate_env_list(info);
 	hsh(info, argv);
 	return (EXIT_SUCCESS);
 }
