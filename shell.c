@@ -10,9 +10,7 @@
 int main(int argc, char **argv)
 {
 	info_t info[] = {INFO_INIT};
-	int fp = 2;
-
-	fp += 3;
+	int fp;
 
 	if (argc == 2)
 	{

@@ -19,7 +19,7 @@ ssize_t input_buffer(info_t *info, char **buf, size_t *len)
 		*buf = NULL;
 		signal(SIGINT, sigintHandler);
 
-		r = getline(buf, &len_p, stdin);
+		r = _getline(info, buf, &len_p);
 
 		if (r > 0)
 		{
