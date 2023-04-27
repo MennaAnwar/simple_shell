@@ -141,6 +141,7 @@ int is_delimeter(char, char *);
 int _error_atoi(char *);
 void print_error(info_t *, char *);
 int print_decimal(int, int);
+char *_itoa(long int num, int base, int flags);
 
 int exit_shell(info_t *);
 int _change_dir(info_t *);
