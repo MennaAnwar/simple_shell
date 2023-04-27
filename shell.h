@@ -182,6 +182,7 @@ int replace_alias(info_t *);
 int print_alias(list_t *);
 int replace_vars(info_t *);
 void comment_handling(char *);
+int replace_string(char **, char *);
 
 void *_realloc(void *, unsigned int, unsigned int);
 int _getline(info_t *, char **, size_t *);
