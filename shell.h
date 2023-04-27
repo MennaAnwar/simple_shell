@@ -171,6 +171,7 @@ size_t list_len(const list_t *);
 char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
 ssize_t get_node_index(list_t *, list_t *);
+int delete_node_at_index(list_t **, unsigned int);
 
 int is_next(info_t *, char *, size_t *);
 void check_next(info_t *, char *, size_t *, size_t, size_t);
